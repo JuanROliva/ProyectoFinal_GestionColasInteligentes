@@ -3,17 +3,19 @@ import java.util.ArrayList;
 
 public class Local {
     private DescripcionLocal descripcionLocal;
-    private Ubicacion ubicacionLocal;
     private Gerente gerenteUnico;
-    private ArrayList<Empleado> listaEmpleados = new ArrayList<Empleado>();
+    private ArrayList<Integer> listaEmpleados = new ArrayList<Integer>();
     private ArrayList<AreaLocal> listaAreas = new ArrayList<AreaLocal>();
 
     public Local() {
     }
+    
+    public Local(DescripcionLocal descripcionLocal) {
+        this.descripcionLocal = descripcionLocal;
+    }
 
     public Local(DescripcionLocal descripcionLocal, Ubicacion ubicacionLocal, Gerente gerenteUnico) {
         this.descripcionLocal = descripcionLocal;
-        this.ubicacionLocal = ubicacionLocal;
         this.gerenteUnico = gerenteUnico;
     }
 
@@ -25,14 +27,6 @@ public class Local {
         this.descripcionLocal = descripcionLocal;
     }
 
-    public Ubicacion getUbicacionLocal() {
-        return ubicacionLocal;
-    }
-
-    public void setUbicacionLocal(Ubicacion ubicacionLocal) {
-        this.ubicacionLocal = ubicacionLocal;
-    }
-
     public Gerente getGerenteUnico() {
         return gerenteUnico;
     }
@@ -41,11 +35,11 @@ public class Local {
         this.gerenteUnico = gerenteUnico;
     }
 
-    public ArrayList<Empleado> getListaEmpleados() {
+    public ArrayList<Integer> getListaEmpleados() {
         return listaEmpleados;
     }
 
-    public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
+    public void setListaEmpleados(ArrayList<Integer> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
     }
 
@@ -63,5 +57,11 @@ public class Local {
     }
     
     //MA 
+    public Object [] getTablaDescrion(){
+        Object [] vector = { descripcionLocal.getCodigoLocal(), 
+                             descripcionLocal.getNombreLocal(),
+                             descripcionLocal.getUbicacionLocal()};
+        return vector;
+    }
     
 }

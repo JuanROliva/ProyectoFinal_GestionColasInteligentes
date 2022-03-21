@@ -38,6 +38,6 @@ public class DescripcionLocal {
 
     @Override
     public String toString() {
-        return nombreLocal;
+        return codigoLocal + "-" + nombreLocal;
     }
 }

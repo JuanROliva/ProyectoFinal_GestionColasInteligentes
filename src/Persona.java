@@ -1,11 +1,11 @@
 public class Persona {
     private String nombre;
-    private int numeroIdentidad;
+    private String numeroIdentidad;
 
     public Persona() {
     }
 
-    public Persona(String nombre, int numeroIdentidad) {
+    public Persona(String nombre, String numeroIdentidad) {
         this.nombre = nombre;
         this.numeroIdentidad = numeroIdentidad;
     }
@@ -18,11 +18,11 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public int getNumeroIdentidad() {
+    public String getNumeroIdentidad() {
         return numeroIdentidad;
     }
 
-    public void setNumeroIdentidad(int numeroIdentidad) {
+    public void setNumeroIdentidad(String numeroIdentidad) {
         this.numeroIdentidad = numeroIdentidad;
     }
 

@@ -4,13 +4,14 @@ import java.util.HashMap;
 
 class AreaLocal {
     private String nombreArea;
+    private AreaVinculadaLocal datosLocal;
     private ArrayList<Transaccion> listaTransacciones = new ArrayList<>();
-    private HashMap<Integer,String> listaEmpleadosArea = new HashMap<>();
+    private HashMap<String,String> listaEmpleadosArea = new HashMap<>();
 
     public AreaLocal(String nombreArea) {
         this.nombreArea = nombreArea;
     }
-
+    
     public String getNombreArea() {
         return nombreArea;
     }
@@ -27,11 +28,11 @@ class AreaLocal {
         this.listaTransacciones = listaTransacciones;
     }
 
-    public HashMap<Integer, String> getEmpleadosArea() {
+    public HashMap<String, String> getEmpleadosArea() {
         return listaEmpleadosArea;
     }
 
-    public void setEmpleadosArea(HashMap<Integer, String> empleadosArea) {
+    public void setEmpleadosArea(HashMap<String, String> empleadosArea) {
         this.listaEmpleadosArea = empleadosArea;
     }
 
@@ -46,4 +47,11 @@ class AreaLocal {
     public void verificarEmpleadoExisteArea(Empleado e){
         listaEmpleadosArea.containsKey(e.getNumeroIdentidad());
     }
+
+    @Override
+    public String toString() {
+        return nombreArea;
+    }
+    
+    
 }
